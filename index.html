@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Energy Meter - Axie Infinity</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <h1 class="titulo">Energy Meter</h1>
+
+        <div class="nav-principal">
+            <a href="https://axieinfinity.com/" class="link">Axie Infinity</a>
+            <a href="https://coinmarketcap.com/currencies/smooth-love-potion/" class="link">Slp value</a>
+            <a href="https://www.linkedin.com/in/leandro-troncoso-ab2b45230/" class="link">Contact me</a>
+        </div>
+        
+        <h1 class="ronda">Round <span id="ronda"></span></h1>
+        <div class="contenedor-principal">
+            <div class="contador-energia">
+                <div class="contenedor-resultado">
+                    <h1 class="resultado"><span id="resultado" class="resultado"></span>/10</h1>
+                </div><!--Fin input-->
+    
+                <div>
+                    <button id="sumar" class="sumar">+</button>
+                </div><!--fin sumar-->
+    
+                <div>
+                    <button id="restar" class="restar">-</button> 
+                </div><!--Fin resta-->
+    
+                <div>
+                    <button id="siguiente" class="siguiente">Next</button>
+                </div><!--FIN SIGUIENTE-->
+                <div>
+                    <button id="deshacer" class="deshacer">Cancel</button>
+                </div>
+                <div>
+                    <button id="reiniciar" class="reiniciar">Reset Game</button>
+                </div><!--fin reiniciar-->
+            </div>
+            <div class="contador-victorias">
+                <div class="victory-meter"><h3>Victory Meter</h3></div>
+                <div class="contenedor-victorias">
+                    <div>
+                        <p>Vic</p>
+                        <button id="sumarVictoria" class="redondo masbutton">+</button>
+                        <h3 id="victoriaContador">0</h3>
+                        <button id="restarVictoria" class="redondo menosbutton">-</button>
+                    </div>
+                    <div>
+                        <p>def</p>
+                        <button id="sumarDerrota" class="redondo masbutton">+</button>
+                        <h3 id="derrotaContador">0</h3>
+                        <button id="restarDerrota" class="redondo menosbutton">-</button>
+                    </div>
+                    <div>
+                        <p>draw</p>
+                        <button id="sumarDraw" class="redondo masbutton">+</button>
+                        <h3 id="drawContador">0</h3>
+                        <button id="restarDraw" class="redondo menosbutton">-</button>
+                    </div>
+                </div>
+                <div class="promedio">
+                    <h3>Promedio:   <span id="promedio">0</span>%</h3>
+
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Author: Troncoso Leandro</p>
+        </footer>
+        <script src="js/app.js"></script>
+    </body>
+</html> 

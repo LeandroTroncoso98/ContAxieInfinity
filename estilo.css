@@ -1,0 +1,343 @@
+html{
+    box-sizing: border-box;
+    font-size: 62,5%;
+}
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    background-image: url(imagenes/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center ;
+    background-size: 200% 100%;
+    max-width: 120rem;
+
+}
+
+
+/*titulo*/
+
+.titulo{
+    font-family: 'Dongle', sans-serif;
+    text-align: center;
+    font-size: 7rem;
+    font-weight: 900;
+    margin: 0;
+
+    
+}
+@media (min-width: 1024px) { 
+    .titulo{
+        font-size: 5rem;
+    }
+} 
+/*  NAV   */
+.nav-principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5rem;
+    border-top: 2px solid #886c52 ;
+    margin:0 2rem;
+}
+.nav-principal a{
+    margin-top: 1rem;
+    padding: .5rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Dongle', sans-serif;
+    font-weight: 400;
+    width: 10rem;
+    height: 4rem;
+    border: 2px solid #886c52;
+    border-radius: 0 .9rem;
+    color: #fff;
+    background-image: url(imagenes/button.jpg);
+    transition: background-image 1s;
+}
+@media (min-width: 720px) { 
+    .nav-principal a{
+        height: 3rem;
+        font-size: 2rem;
+    }
+} 
+@media (min-width: 1024px) { 
+    .nav-principal a{
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+} 
+
+.nav-principal a:hover{
+    background: rgba(255, 255, 255, .4);
+    color: #5e5e5e;
+}
+
+.ronda{
+    font-family: 'Dongle', sans-serif;
+    font-size: 9rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+/*Contador de energia*/ 
+
+.contador-energia{
+    margin: auto;
+    width: 100%;
+    height: 50rem;
+    padding-top: .5rem;
+    border: 3px solid #886c52;
+    border-radius: 2rem;
+    padding: 0 3rem;
+    background-color: rgba(255, 255, 255, .4);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) { 
+  .contador-energia{
+      width: 30rem;
+      height: 30rem;
+  }  
+} 
+.contenedor-resultado {
+    border: 2px solid #886c52;
+    padding: 0;
+    margin: 0 auto ;
+    width: 100%;
+    margin-top: 2rem;
+    height: 10rem;
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, .7);
+    text-align: center;
+}
+@media (min-width: 1024px) { 
+    .contenedor-resultado{
+        height: 5rem;
+    }
+} 
+
+.resultado{
+    font-size: 8rem;
+    text-align: center;
+    font-family: 'Dongle', sans-serif;
+    margin-top: 1rem;
+}
+@media (min-width: 1024px) { 
+    .resultado{
+        font-size: 4rem;
+        margin-top: 0.5rem;
+    }
+} 
+
+.contador-energia div:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.contador-energia div:nth-child(2){
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.contador-energia div:nth-child(3){
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.contador-energia div:nth-child(4){
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.contador-energia div:nth-child(5){
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.contador-energia div:nth-child(6){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.contador-energia button{
+    width: 100%;
+    height: 8rem;
+    border: none;
+    margin: 0 auto;
+    margin-top: 1rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Dongle', sans-serif;
+    font-weight: 900;
+    font-size: 4.35rem;
+    border-radius: 10px;
+}
+@media (min-width: 1024px) { 
+    .contador-energia button{
+        height: 4rem;
+        font-size: 2rem;
+    }
+} 
+
+.sumar{
+    background-color: #4CAF50;
+    transition: background .5s;
+}
+.sumar:hover{
+    background-color: #33691e;
+}
+
+.restar{
+    background-color: #ef5350;
+    transition: background 0.5s;
+}
+.restar:hover{
+    background-color: #b71c1c;
+}
+
+.siguiente{
+    background-color: #ffae6a;
+    transition: background .5s;
+}
+.siguiente:hover{
+   background-color: #c65314;
+}
+
+.deshacer{
+    background-color: #aaaaaa;
+    transition: background-color .5s;
+}
+.deshacer:hover{
+    background-color: #5e5e5e ;
+}
+
+ .reiniciar  {
+    width: 100rem;
+    background-color: #64b5f6;
+    transition: background 0.5s;
+}
+.reiniciar:hover{
+    background:#0d47a1;
+}
+
+
+.contador-victorias{
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 30rem;
+    height: 30rem;
+    border: 2px solid #886c52;
+    border-radius: 4px; 
+    background-color: rgba(255, 255, 255, .3);
+    text-align: center;    
+    font-family: 'Dongle', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+}
+@media (min-width: 1024px) { 
+    .contador-victorias{
+        width: 20rem;
+        height: 12rem;
+        font-size: 1rem;
+    }
+} 
+
+.contador-victorias h3, p {
+    margin: 0 auto;
+    font-size: 5rem;
+
+}
+@media (min-width: 1024px) { 
+    .contador-victorias h3, p {
+        margin: 0 auto;
+        font-size: 2rem;
+    
+    }
+} 
+.contenedor-victorias{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.promedio{
+    height: 4rem;
+    background-image: url(imagenes/button.jpg);
+    display: flex;
+    border: 2px solid #886c52;
+    border-radius: 3.7px;
+    text-align: center;
+    margin-top:5rem;
+    margin-bottom: 2rem;
+}
+.promedio h3{
+    margin: 0 auto;
+    color: #fff;
+    font-size: 4rem;
+}
+
+@media (min-width: 1024px) { 
+    .promedio {
+        height: 2rem;
+    }
+    .promedio h3{
+        font-size: 2rem;
+    }
+} 
+
+
+
+
+.redondo{
+    width: 5rem;
+    height: 5rem;
+    border-radius:50% ;
+    text-decoration: none;
+    border: 2px solid #886c52;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 900;
+
+}
+@media (min-width: 1024px) { 
+    .redondo{
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.5rem;
+    }
+} 
+
+.menosbutton{
+    background-color: #ef5350;
+
+}
+
+
+.masbutton{
+    background-color: #64b5f6;
+
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 10rem;
+    border-top: 2px solid #886c52;
+    font-family: 'Dongle', sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: 1.5rem;
+    height: 7.6rem;
+}
+
+.footer p{
+    margin-top: .6rem;
+}
+
+@media (min-width: 1024px) { 
+    .footer{
+        height: 4rem;
+        padding-bottom:0 ;
+    }
+} 
